@@ -55,7 +55,7 @@ markSquare = function(e){
 }
 function winCondition(){
     for (let i =0; i<3; i++) {
-    if (squareElements[i].textContent===squareElements[i+3].textContent&& squareElements[i].textContent===squareElements[i+6].textContent&&squareElements[i].textContent!=='')
+    if (board[i]===board[i+3].textContent&& squareElements[i].textContent===squareElements[i+6].textContent&&squareElements[i].textContent!=='')
         {winner = squareElements[i].textContent
         return true}
     

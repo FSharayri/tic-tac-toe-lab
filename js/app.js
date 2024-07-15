@@ -25,7 +25,9 @@ const squareEls = document.querySelectorAll('.sqr')
 const messageEl = document.querySelector('#message')
 const boardEl = document.querySelector('.board')
 const resetBtnEl = document.querySelector('#reset')
+
 /*-------------------------------- Functions --------------------------------*/
+
 function init(){
     board = ['','','',
             '','','',
@@ -33,7 +35,6 @@ function init(){
     turn = 'X'
     winner = false
     tie = false
-
     render()
     
 }
@@ -91,15 +92,13 @@ function checkForWinner(){
         && board[winningCombo[0]] === board[winningCombo[1]] //1=2
         && board[winningCombo[0]] === board[winningCombo[2]])//1=3
             winner = true
-            console.log(winner)
+        
     })
 }
 function checkForTie(){
-    if (winner) return
-    tie = true
-    board.forEach((square)=>{
-        if (square==='') tie = false
-    })
+    
+    if (!winner && !board.includes('')) tie = true
+    
 }
 function switchPlayerTurn(){
     if (winner) return
