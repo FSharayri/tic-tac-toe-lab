@@ -102,10 +102,7 @@ function checkForTie(){
 }
 function switchPlayerTurn(){
     if (winner) return
-    else {
-       if (turn==='X') turn = 'O'
-       else if (turn === 'O') turn = 'X' 
-    }
+    turn = turn === 'X'? 'O': 'X'
 }
 
 init()
