@@ -1,14 +1,26 @@
 body {
-    background-color: gainsboro;
+    background-color: #abc4c1;
     /* Use a system font, if none are available use an available sans-sarif */
     font-family: system-ui, sans-serif;
     margin: 0;
+    display :flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+    gap: 3vh;
+    color: #2660A4;
   }
   
   .board {
     display: flex;
     flex-wrap: wrap;
-    width: 325px;
+    width: 50vh;
+    align-items: center;
+    justify-content: center;
+    
+
   }
   
   .sqr {
@@ -17,9 +29,26 @@ body {
     border: 3px solid black;
     font-size: 64px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   .used {
     background-color: rgb(88, 88, 88);
 
   }
+  #reset{
+    
+    font-size: 4vh;
+    background-color: #F19953;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 2/1; 
+    width: 30vh; ;
+
+
+  }
+  
   

@@ -9,6 +9,10 @@ const winningCombos =[
     [0,4,8],
     [2,4,6]
 ]
+const playerChoices= [] // to be done later 
+const player1 = '🤵'
+const player2 = '👽'
+
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -32,7 +36,7 @@ function init(){
     board = ['','','',
             '','','',
             '','','']
-    turn = 'X'
+    turn = player1
     winner = false
     tie = false
     render()
@@ -50,11 +54,11 @@ function updateBoard(){
         squareEls[i].textContent = element 
     
         if (element==='')
-            squareEls[i].style.backgroundColor = 'white'
-        if (element==='X')
-            squareEls[i].style.backgroundColor = 'darkblue'
-        if (element==='O')
-            squareEls[i].style.backgroundColor = 'darkorange'
+            squareEls[i].style.backgroundColor = '#a0d0d0'
+        if (element===player1)
+            squareEls[i].style.backgroundColor = '#C47335'
+        if (element===player2)
+            squareEls[i].style.backgroundColor = '#56351E'
     })
 
 }
@@ -102,7 +106,7 @@ function checkForTie(){
 }
 function switchPlayerTurn(){
     if (winner) return
-    turn = turn === 'X'? 'O': 'X'
+    turn = turn === player1? player2: player1
 }
 
 init()
