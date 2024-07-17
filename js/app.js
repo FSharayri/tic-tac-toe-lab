@@ -12,8 +12,8 @@ const winningCombos =[
 const playerChoices= [] // to be done later 
 const player1 = '🤵'
 const player2 = '👽'
-
-
+const sound1 = new Audio(/* url*/)
+/* play command is sound1.play() */
 
 /*---------------------------- Variables (state) ----------------------------*/
 let board 
@@ -71,6 +71,7 @@ function updateMessage(){
 
     }
     else {
+        confetti.start(1500)
          messageEl.textContent=`${turn} Wins!`
     }
 
